@@ -3,21 +3,42 @@
 	"displayName": "open junk dir",
 	"description": "create a junk directory",
 	"version": "0.0.1",
+	"publisher": "Konboi",
 	"engines": {
 		"vscode": "^1.30.0"
 	},
+	"repository": {
+		"type":"git",
+		"url": "https://github.com/Konboi/vscode-open-junk-dir"
+	},
+	"homepage": "https://github.com/Konboi/vscode-open-junk-dir",
 	"categories": [
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:extension.helloWorld"
+		"onCommand:extension.openJunkDir"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
+		"configuration":{
+			"type":"object",
+			"title": "openJunkDir",
+			"properties": {
+				"openJunkDir.junkFileDir": {
+					"type": "string",
+					"default": "~/junk",
+					"description": "root directory to make junk file"
+				},
+				"openJunkDir.junkFileFormat": {
+					"type": "string",
+					"default":"/%Y/%m/%dY%m%d_%H%M%S"
+				}
+			}
+		},
 		"commands": [
 			{
-				"command": "extension.helloWorld",
-				"title": "Hello World"
+				"command": "extension.openJunkDir",
+				"title": "Open Junk Dir"
 			}
 		]
 	},
