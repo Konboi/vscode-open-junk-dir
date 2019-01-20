@@ -31,7 +31,7 @@
 				},
 				"openJunkDir.junkFileFormat": {
 					"type": "string",
-					"default": "/%Y/%m/%dY%m%d_%H%M%S",
+					"default": "/YYYY/MM/DD/YYYYMMDD_hmmss",
 					"description": "junk file file directory"
 				}
 			}
