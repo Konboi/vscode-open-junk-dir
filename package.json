@@ -58,6 +58,7 @@
 		"@types/mocha": "^2.2.42"
 	},
 	"dependencies": {
+		"@types/moment": "^2.13.0",
 		"moment": "^2.23.0"
 	}
 }
