@@ -11,13 +11,14 @@ export function activate(context: vscode.ExtensionContext) {
       .getConfiguration("openJunkDir")
       .get<string>("junkFileFormat");
 
-    let dir = await vscode.window.showInputBox({ prompt: "Directory Name" })
+    let dir = await vscode.window.showInputBox({
+      prompt: "Directory Suffix"
+    })
     let junkDir = untildify(rootDir + moment().format(fileDirFormat) + "_" + dir)
 
     if (!fs.existsSync(junkDir)) {
       fs.mkdirsSync(junkDir)
     }
-  }
-  );
+  });
   context.subscriptions.push(disposable);
 }

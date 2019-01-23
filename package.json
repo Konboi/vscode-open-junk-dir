@@ -32,7 +32,7 @@
 				"openJunkDir.junkFileFormat": {
 					"type": "string",
 					"default": "/YYYY/MM/DD/YYYYMMDD_hmmss",
-					"description": "junk file file directory"
+					"description": "junk file file directory format (Moment.js format)"
 				}
 			}
 		},
