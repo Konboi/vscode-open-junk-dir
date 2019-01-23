@@ -58,7 +58,9 @@
 		"@types/mocha": "^2.2.42"
 	},
 	"dependencies": {
+		"@types/fs-extra": "^5.0.4",
 		"@types/moment": "^2.13.0",
+		"fs-extra": "^7.0.1",
 		"moment": "^2.23.0"
 	}
 }
