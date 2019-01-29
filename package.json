@@ -2,6 +2,7 @@
 	"name": "open-junk-dir",
 	"displayName": "open junk dir",
 	"description": "create a junk directory",
+	"icon": "images/logo.png",
 	"version": "0.0.1",
 	"publisher": "Konboi",
 	"engines": {
@@ -32,7 +33,7 @@
 				"openJunkDir.junkFileFormat": {
 					"type": "string",
 					"default": "/YYYY/MM/DD/YYYYMMDD_hmmss",
-					"description": "junk file file directory format (Moment.js format)"
+					"description": "junk file directory format (Moment.js format)"
 				}
 			}
 		},
