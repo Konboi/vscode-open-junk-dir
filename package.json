@@ -3,7 +3,7 @@
 	"displayName": "open junk dir",
 	"description": "create a junk directory",
 	"icon": "images/logo.png",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"publisher": "Konboi",
 	"engines": {
 		"vscode": "^1.30.0"
