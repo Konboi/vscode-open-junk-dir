@@ -7,12 +7,12 @@ export function activate(context: vscode.ExtensionContext) {
   const { commands, workspace, window } = vscode;
   let disposable = commands.registerCommand("extension.openJunkDir", async () => {
 
-    let rootDir = workspace.getConfiguration("openJunkDir").get<string>("junkFileDir");
-    let fileDirFormat = vscode.workspace
+    const rootDir = workspace.getConfiguration("openJunkDir").get<string>("junkFileDir");
+    const fileDirFormat = vscode.workspace
       .getConfiguration("openJunkDir")
       .get<string>("junkFileFormat");
 
-    let dir = await window.showInputBox({
+    const dir = await window.showInputBox({
       prompt: "Directory Name"
     })
     let junkDir = untildify(rootDir + moment().format(fileDirFormat) + "_" + dir)
@@ -21,11 +21,11 @@ export function activate(context: vscode.ExtensionContext) {
       fs.mkdirsSync(junkDir)
     }
 
-    let file = await window.showInputBox({
+    const file = await window.showInputBox({
       prompt: "File Name",
     })
 
-    let uri = vscode.Uri.parse("untitled:" + junkDir + "/" + file)
+    const uri = vscode.Uri.parse("untitled:" + junkDir + "/" + file)
 
     workspace.openTextDocument(uri).then((text) => {
       window.showTextDocument(text, vscode.ViewColumn.One)
