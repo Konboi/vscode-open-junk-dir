@@ -52,20 +52,18 @@
 		"test": "npm run compile && node ./node_modules/vscode/bin/test"
 	},
 	"devDependencies": {
-		"typescript": "^3.1.4",
-		"vscode": "^1.1.25",
-		"tslint": "^5.8.0",
-		"@types/node": "^8.10.25",
-		"@types/mocha": "^2.2.42"
+		"@types/mocha": "^2.2.42",
+		"@types/node": "^8.10.39",
+		"tslint": "^5.12.1",
+		"typescript": "^3.3.1",
+		"vscode": "^1.1.28"
 	},
 	"dependencies": {
-		"@types/fs-extra": "^5.0.4",
 		"@types/mkdirp": "^0.5.2",
 		"@types/moment": "^2.13.0",
 		"@types/untildify": "^3.0.0",
-		"fs-extra": "^7.0.1",
 		"mkdirp": "^0.5.1",
-		"moment": "^2.23.0",
+		"moment": "^2.24.0",
 		"untildify": "^3.0.3"
 	}
 }
