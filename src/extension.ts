@@ -1,35 +1,41 @@
 import * as vscode from "vscode";
 import * as moment from "moment";
-import * as fs from 'fs-extra';
+import * as fs from 'fs';
+import mkdirp = require('mkdirp');
 import untildify = require('untildify');
 
 export function activate(context: vscode.ExtensionContext) {
-  let disposable = vscode.commands.registerCommand("extension.openJunkDir", async () => {
+  const { commands, workspace, window } = vscode;
+  let disposable = commands.registerCommand("extension.openJunkDir", async () => {
 
-    let rootDir = vscode.workspace.getConfiguration("openJunkDir").get<string>("junkFileDir");
-    let fileDirFormat = vscode.workspace
+    const rootDir = workspace.getConfiguration("openJunkDir").get<string>("junkFileDir");
+    const fileDirFormat = vscode.workspace
       .getConfiguration("openJunkDir")
       .get<string>("junkFileFormat");
 
-    let dir = await vscode.window.showInputBox({
+    const dir = await window.showInputBox({
       prompt: "Directory Name"
     })
     let junkDir = untildify(rootDir + moment().format(fileDirFormat) + "_" + dir)
 
     if (!fs.existsSync(junkDir)) {
-      fs.mkdirsSync(junkDir)
+      mkdirp(junkDir, function (err) {
+        if (err) {
+          console.error(err)
+        }
+      })
     }
 
-    let file = await vscode.window.showInputBox({
+
+    const file = await window.showInputBox({
       prompt: "File Name",
     })
 
-    let uri = vscode.Uri.parse("untitled:" + junkDir + "/" + file)
+    const uri = vscode.Uri.parse(`untitled:${junkDir}/${file}`)
 
-    vscode.workspace.openTextDocument(uri).then((text) => {
-      vscode.window.showTextDocument(text, vscode.ViewColumn.One)
+    workspace.openTextDocument(uri).then((text) => {
+      window.showTextDocument(text, vscode.ViewColumn.One)
     })
-    console.log("open:" + junkDir)
   });
 
   context.subscriptions.push(disposable);
