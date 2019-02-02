@@ -25,7 +25,7 @@ export function activate(context: vscode.ExtensionContext) {
       prompt: "File Name",
     })
 
-    const uri = vscode.Uri.parse("untitled:" + junkDir + "/" + file)
+    const uri = vscode.Uri.parse("untitled:${junkDir}/${file}")
 
     workspace.openTextDocument(uri).then((text) => {
       window.showTextDocument(text, vscode.ViewColumn.One)
