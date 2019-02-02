@@ -1,6 +1,7 @@
 import * as vscode from "vscode";
 import * as moment from "moment";
-import * as fs from 'fs-extra';
+import * as fs from 'fs';
+import mkdirp = require('mkdirp');
 import untildify = require('untildify');
 
 export function activate(context: vscode.ExtensionContext) {
@@ -18,8 +19,13 @@ export function activate(context: vscode.ExtensionContext) {
     let junkDir = untildify(rootDir + moment().format(fileDirFormat) + "_" + dir)
 
     if (!fs.existsSync(junkDir)) {
-      fs.mkdirsSync(junkDir)
+      mkdirp(junkDir, function (err) {
+        if (err) {
+          console.error(err)
+        }
+      })
     }
+
 
     const file = await window.showInputBox({
       prompt: "File Name",
