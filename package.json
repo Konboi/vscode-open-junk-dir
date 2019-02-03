@@ -2,7 +2,6 @@
 	"name": "open-junk-dir",
 	"displayName": "open junk dir",
 	"description": "create a junk directory",
-	"icon": "images/logo.png",
 	"version": "0.0.2",
 	"publisher": "Konboi",
 	"engines": {
