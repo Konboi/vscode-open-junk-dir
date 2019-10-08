@@ -60,7 +60,7 @@
 	"dependencies": {
 		"@types/mkdirp": "^0.5.2",
 		"@types/moment": "^2.13.0",
-		"@types/untildify": "^3.0.0",
+		"@types/untildify": "^4.0.0",
 		"mkdirp": "^0.5.1",
 		"moment": "^2.24.0",
 		"untildify": "^4.0.0"
