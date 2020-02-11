@@ -58,7 +58,7 @@
 		"vscode": "^1.1.28"
 	},
 	"dependencies": {
-		"@types/mkdirp": "^0.5.2",
+		"@types/mkdirp": "^1.0.0",
 		"@types/moment": "^2.13.0",
 		"@types/untildify": "^4.0.0",
 		"mkdirp": "^1.0.3",
