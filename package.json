@@ -62,7 +62,7 @@
 		"@types/moment": "^2.13.0",
 		"@types/untildify": "^4.0.0",
 		"mkdirp": "^1.0.4",
-		"moment": "^2.24.0",
+		"moment": "^2.25.3",
 		"untildify": "^4.0.0"
 	}
 }
