@@ -1,68 +1,67 @@
 {
-	"name": "open-junk-dir",
-	"displayName": "open junk dir",
-	"description": "create a junk directory",
-	"version": "0.0.2",
-	"publisher": "Konboi",
-	"engines": {
-		"vscode": "^1.30.0"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/Konboi/vscode-open-junk-dir"
-	},
-	"homepage": "https://github.com/Konboi/vscode-open-junk-dir",
-	"categories": [
-		"Other"
-	],
-	"activationEvents": [
-		"onCommand:extension.openJunkDir"
-	],
-	"main": "./out/extension.js",
-	"contributes": {
-		"configuration": {
-			"type": "object",
-			"title": "openJunkDir",
-			"properties": {
-				"openJunkDir.junkFileDir": {
-					"type": "string",
-					"default": "~/junk",
-					"description": "root directory to make junk file"
-				},
-				"openJunkDir.junkFileFormat": {
-					"type": "string",
-					"default": "/YYYY/MM/DD/YYYYMMDD_hmmss",
-					"description": "junk file directory format (Moment.js format)"
-				}
-			}
-		},
-		"commands": [
-			{
-				"command": "extension.openJunkDir",
-				"title": "Open Junk Dir"
-			}
-		]
-	},
-	"scripts": {
-		"vscode:prepublish": "npm run compile",
-		"compile": "tsc -p ./",
-		"watch": "tsc -watch -p ./",
-		"postinstall": "node ./node_modules/vscode/bin/install",
-		"test": "npm run compile && node ./node_modules/vscode/bin/test"
-	},
-	"devDependencies": {
-		"@types/mocha": "^7.0.2",
-		"@types/node": "^14.11.2",
-		"tslint": "^6.1.1",
-		"typescript": "^4.0.3",
-		"vscode": "^1.1.28"
-	},
-	"dependencies": {
-		"@types/mkdirp": "^1.0.0",
-		"@types/moment": "^2.13.0",
-		"@types/untildify": "^4.0.0",
-		"mkdirp": "^1.0.4",
-		"moment": "^2.29.0",
-		"untildify": "^4.0.0"
-	}
+  "name": "open-junk-dir",
+  "displayName": "open junk dir",
+  "description": "create a junk directory",
+  "version": "0.0.2",
+  "publisher": "Konboi",
+  "engines": {
+    "vscode": "^1.30.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Konboi/vscode-open-junk-dir"
+  },
+  "homepage": "https://github.com/Konboi/vscode-open-junk-dir",
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:extension.openJunkDir"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "configuration": {
+      "type": "object",
+      "title": "openJunkDir",
+      "properties": {
+        "openJunkDir.junkFileDir": {
+          "type": "string",
+          "default": "~/junk",
+          "description": "root directory to make junk file"
+        },
+        "openJunkDir.junkFileFormat": {
+          "type": "string",
+          "default": "/YYYY/MM/DD/YYYYMMDD_hmmss",
+          "description": "junk file directory format (DAY.js format)"
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "extension.openJunkDir",
+        "title": "Open Junk Dir"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "npm run compile && node ./node_modules/vscode/bin/test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^7.0.2",
+    "@types/node": "^14.11.2",
+    "tslint": "^6.1.1",
+    "typescript": "^4.0.3",
+    "vscode": "^1.1.28"
+  },
+  "dependencies": {
+    "@types/mkdirp": "^1.0.0",
+    "@types/untildify": "^4.0.0",
+    "dayjs": "^1.8.36",
+    "mkdirp": "^1.0.4",
+    "untildify": "^4.0.0"
+  }
 }
