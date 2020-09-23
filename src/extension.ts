@@ -1,5 +1,5 @@
 import * as vscode from "vscode";
-import * as moment from "moment";
+import * as dayjs from "dayjs";
 import * as fs from "fs";
 import mkdirp = require("mkdirp");
 import untildify = require("untildify");
@@ -20,7 +20,7 @@ export function activate(context: vscode.ExtensionContext) {
         prompt: "Directory Name",
       });
       let junkDir = untildify(
-        rootDir + moment().format(fileDirFormat) + "_" + dir
+        rootDir + dayjs().format(fileDirFormat) + "_" + dir
       );
 
       if (!fs.existsSync(junkDir)) {
