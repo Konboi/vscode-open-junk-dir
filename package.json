@@ -60,7 +60,7 @@
   "dependencies": {
     "@types/mkdirp": "^1.0.1",
     "@types/untildify": "^4.0.0",
-    "dayjs": "^1.10.4",
+    "dayjs": "^1.10.5",
     "mkdirp": "^1.0.4",
     "untildify": "^4.0.0"
   }
