@@ -58,7 +58,7 @@
     "typescript": "5.9.3"
   },
   "dependencies": {
-    "untildify": "^4.0.0",
+    "untildify": "^6.0.0",
     "mkdirp": "^3.0.1",
     "dayjs": "^1.11.8"
 
