@@ -1,7 +1,7 @@
 import * as vscode from "vscode";
 import * as dayjs from "dayjs";
 import * as fs from "fs";
-import mkdirp = require("mkdirp");
+import { mkdirp } from "mkdirp";
 import untildify = require("untildify");
 
 export function activate(context: vscode.ExtensionContext) {
