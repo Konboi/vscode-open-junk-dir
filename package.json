@@ -52,7 +52,7 @@
   },
   "devDependencies": {
     "vscode": "^1.0.0",
-    "eslint": "9.38.0",
+    "eslint": "9.39.2",
     "@types/mocha": "10.0.10",
     "@types/node": "22.9.0",
     "typescript": "5.9.3"
